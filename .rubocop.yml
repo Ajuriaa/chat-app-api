@@ -6,7 +6,7 @@ require:
 AllCops:
   NewCops: enable
   Exclude:
-    - 'app/actions/biiz_action/*.rb'
+    - 'app/actions/simple_action/*.rb'
     - 'config/**/*'
     - 'db/migrate/*.rb'
     - 'db/data/*.rb'
