@@ -7,6 +7,14 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable,
          :jwt_authenticatable, jwt_revocation_strategy: self
 
+  def short_name
+    "#{first_name.split.first} #{last_name.split.first}"
+  end
+
+  def full_name
+    [first_name, last_name].join(' ').strip
+  end
+
   def jwt_subject
     id.to_s
   end

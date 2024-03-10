@@ -43,6 +43,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_03_09_202914) do
     t.datetime "updated_at", null: false
     t.string "jti"
     t.string "username"
+    t.date "birthdate"
     t.string "first_name"
     t.string "last_name"
     t.string "first_password"

@@ -2,12 +2,9 @@ class Ability
   include CanCan::Ability
 
   def self.for(user)
-    case user.exists?
-    when true
-      UserAbility.new(user)
-    else
-      raise 'You are not logged in!'
-    end
+    raise 'You are not logged in!' if user.nil?
+
+    UserAbility.new(user)
   end
 
   def initialize(user)
